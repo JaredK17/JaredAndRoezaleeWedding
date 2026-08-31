@@ -2578,7 +2578,9 @@ body.custom-cursor-active select {
         grid-template-columns:
             .75fr 1.5fr .75fr;
 
-        min-height: 600px;
+        height: 60vh;
+
+        min-height: 420px;
     }
 
 
