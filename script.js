@@ -647,6 +647,10 @@ function submitRSVP() {
                     with you!
                 </p>
 
+                <p class="redirect-notice">
+                    Redirecting you to WhatsApp to send your RSVP...
+                </p>
+
                 <a
                     class="whatsapp-button btn-ripple"
                     href="${getWhatsAppRSVPLink(currentGuestCode, guest)}"
@@ -671,6 +675,22 @@ function submitRSVP() {
     sendRSVPToBackend(currentGuestCode, guest);
 
     saveRSVPData();
+
+    redirectToWhatsApp(currentGuestCode, guest);
+
+}
+
+
+function redirectToWhatsApp(code, guest) {
+
+    setTimeout(() => {
+
+        window.open(
+            getWhatsAppRSVPLink(code, guest),
+            "_blank"
+        );
+
+    }, 2000);
 
 }
 

@@ -1613,6 +1613,17 @@ select {
 }
 
 
+.redirect-notice {
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    opacity: .7;
+}
+
+
 .whatsapp-button {
     display: block;
 
