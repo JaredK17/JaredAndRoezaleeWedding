@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Jared & Roezalee | 27 February 2027
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         ENVELOPE INTRO
+    ====================================================== -->
+
+    <div
+        class="envelope-intro"
+        id="envelopeIntro"
+    >
+
+        <div class="envelope-scene">
+
+            <div class="envelope-letter">
+
+                <p class="envelope-letter-title">
+                    You're Invited
+                </p>
+
+                <h2 class="envelope-letter-names">
+                    Jared
+                    <span>&amp;</span>
+                    Roezalee
+                </h2>
+
+                <p class="envelope-letter-date">
+                    27 · 02 · 2027
+                </p>
+
+            </div>
+
+            <div class="envelope-back"></div>
+
+            <div class="envelope-flap"></div>
+
+            <button
+                type="button"
+                class="envelope-seal btn-ripple"
+                id="envelopeSeal"
+                aria-label="Open invitation"
+            >
+                <span>J&amp;R</span>
+            </button>
+
+        </div>
+
+        <p class="envelope-hint">
+            Tap the seal to open your invitation
+        </p>
+
+        <button
+            type="button"
+            class="envelope-skip"
+            id="envelopeSkip"
+        >
+            Skip
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         BACKGROUND MUSIC
+    ====================================================== -->
+
+    <audio
+        id="weddingMusic"
+        src="wedding-song.mp3"
+        loop
+        preload="auto"
+    ></audio>
+
+    <button
+        type="button"
+        class="music-toggle btn-ripple"
+        id="musicToggle"
+        aria-label="Toggle background music"
+    >
+        ♪
+    </button>
+
+
+    <!-- =====================================================
+         SCROLL PROGRESS BAR
+    ====================================================== -->
+
+    <div
+        class="scroll-progress"
+        id="scrollProgress"
+    ></div>
+
+
+    <!-- =====================================================
+         FLOATING RSVP BUTTON
+    ====================================================== -->
+
+    <a
+        href="#rsvp"
+        class="rsvp-float btn-ripple"
+        id="rsvpFloat"
+    >
+        RSVP
+    </a>
+
+
+    <!-- =====================================================
+         WEDDING WEBSITE
+    ====================================================== -->
+
+    <main id="mainWebsite">
+
+
+        <!-- =================================================
+             HERO / PHOTOS
+        ================================================== -->
+
+        <section
+            class="hero-gallery"
+            id="heroGallery"
+        >
+
+            <div
+                class="hero-panel hero-panel-left"
+                id="heroLeft"
+            ></div>
+
+
+            <div
+                class="hero-panel hero-panel-center"
+                id="heroCenter"
+            ></div>
+
+
+            <div
+                class="hero-panel hero-panel-right"
+                id="heroRight"
+            ></div>
+
+
+            <div class="hero-gallery-overlay"></div>
+
+
+            <div class="hero-gallery-content">
+
+                <p class="hero-small-title">
+                    THE WEDDING OF
+                </p>
+
+
+                <h1>
+                    Jared
+                    <span>&amp;</span>
+                    Roezalee
+                </h1>
+
+
+                <div class="hero-gallery-line"></div>
+
+
+                <p class="hero-gallery-date">
+                    27 FEBRUARY 2027
+                </p>
+
+
+                <div class="hero-scroll">
+
+                    ↓
+
+                    <span>
+                        SCROLL TO EXPLORE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="hero-gallery-arrow hero-gallery-arrow-left"
+                id="heroPrevious"
+                type="button"
+                aria-label="Previous photo"
+            >
+                ‹
+            </button>
+
+
+            <button
+                class="hero-gallery-arrow hero-gallery-arrow-right"
+                id="heroNext"
+                type="button"
+                aria-label="Next photo"
+            >
+                ›
+            </button>
+
+
+            <div
+                class="hero-gallery-dots"
+                id="heroDots"
+            >
+
+                <button
+                    class="hero-gallery-dot active"
+                    type="button"
+                    data-slide="0"
+                    aria-label="Photo 1"
+                ></button>
+
+
+                <button
+                    class="hero-gallery-dot"
+                    type="button"
+                    data-slide="1"
+                    aria-label="Photo 2"
+                ></button>
+
+
+                <button
+                    class="hero-gallery-dot"
+                    type="button"
+                    data-slide="2"
+                    aria-label="Photo 3"
+                ></button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             COUNTDOWN
+        ================================================== -->
+
+        <section class="countdown section">
+
+            <p class="eyebrow">
+                COUNTING DOWN
+            </p>
+
+
+            <h2>
+                Until we say I do
+            </h2>
+
+
+            <p class="section-intro countdown-intro">
+                Every day brings us a little closer
+                to celebrating forever together.
+            </p>
+
+
+            <div class="countdown-grid">
+
+                <div>
+
+                    <strong id="days">
+                        0
+                    </strong>
+
+                    <span>
+                        DAYS
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="hours">
+                        0
+                    </strong>
+
+                    <span>
+                        HOURS
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="minutes">
+                        0
+                    </strong>
+
+                    <span>
+                        MINUTES
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="seconds">
+                        0
+                    </strong>
+
+                    <span>
+                        SECONDS
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             OUR STORY
+        ================================================== -->
+
+        <section class="story section">
+
+            <p class="eyebrow">
+                OUR STORY
+            </p>
+
+
+            <h2>
+                It all started with a hello.
+            </h2>
+
+
+            <div class="story-content">
+
+                <p>
+                    Our story began long before we ever imagined
+                    it would lead us here. We first met in primary
+                    school and became friends throughout high school.
+                    Life eventually took us in different directions,
+                    and after losing touch for many years, our
+                    paths crossed again.
+                </p>
+
+
+                <p>
+                    On 27 February 2021, we went on our first
+                    date — and the rest, as they say, is history.
+                    We even joked about having six-month dating
+                    contracts, never knowing just how far our
+                    little joke would take us.
+                </p>
+
+
+                <p>
+                    For two years, Jared drove down every month
+                    just to spend time together, making every visit
+                    something special. In 2023, Roezalee moved to
+                    Johannesburg, bringing us closer and giving us
+                    the chance to create even more memories together.
+                </p>
+
+
+                <p>
+                    From countless adventures and unforgettable
+                    moments to all the ordinary days that became
+                    extraordinary simply because we were together,
+                    our journey has brought us here.
+                </p>
+
+
+                <p class="story-ending">
+                    And now, after all these years, we get to
+                    begin our greatest adventure yet forever together.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PHOTO BREAK
+        ================================================== -->
+
+        <section
+            class="photo-break"
+            style="background-image: url('couple 6.jpeg');"
+        >
+
+            <div class="photo-break-overlay"></div>
+
+            <p class="photo-break-caption">
+                Every chapter of us began with a little adventure.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             THE PROPOSAL
+        ================================================== -->
+
+        <section class="proposal section">
+
+            <div class="chapter-number">
+                01
+            </div>
+
+
+            <p class="eyebrow">
+                THE PROPOSAL
+            </p>
+
+
+            <h2>
+                The moment everything changed.
+            </h2>
+
+
+            <div class="proposal-content">
+
+                <p>
+                    31 July 2026 | we got engaged.
+                </p>
+
+
+                <p>
+                    After many conversations about marriage
+                    throughout 2025, we somehow always found
+                    another excuse to postpone it. Then, in
+                    February 2026, what started as a joke quickly
+                    became a reality: "Why don't we just go and
+                    sign and tell everyone?"
+                </p>
+
+
+                <p>
+                    So we drove down to KZN, made the decision,
+                    and set our wedding date. But, as life would
+                    have it, we soon realised that our firstborn,
+                    Jaden, would be writing his matric exams around
+                    that time, so once again, we went back to the
+                    drawing board.
+                </p>
+
+
+                <p>
+                    Then came the thought that felt just right:
+                    how perfect would it be to get married on the
+                    day it all began? Our first date was on
+                    27 February 2021, and now, five years later,
+                    we'll say "I do" on 27 February 2027.
+                </p>
+
+
+                <p>
+                    What started as a joke, followed by years of
+                    conversations, plans, postponements and a
+                    spontaneous drive to KZN, has brought us to
+                    the moment we've been waiting for.
+                </p>
+
+
+                <p class="proposal-ending">
+                    And on 31 July 2026, everything changed
+                    not because our story began that day, but
+                    because that was the day we knew for certain
+                    our forever was about to begin.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             NEXT CHAPTER
+        ================================================== -->
+
+        <section class="next-chapter section">
+
+            <div class="chapter-number">
+                02
+            </div>
+
+
+            <p class="eyebrow">
+                THE NEXT CHAPTER
+            </p>
+
+
+            <h2>
+                Forever starts here.
+            </h2>
+
+
+            <div class="next-chapter-content">
+
+                <p>
+                    Now we're turning the page to the next chapter
+                    of our story husband and wife.
+                </p>
+
+
+                <p>
+                    We can't wait to celebrate this new beginning
+                    surrounded by the people who have loved,
+                    supported and walked alongside us.
+                </p>
+
+
+                <p class="next-chapter-ending">
+                    Here's to forever.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PHOTO BREAK
+        ================================================== -->
+
+        <section
+            class="photo-break"
+            style="background-image: url('couple 7.jpeg');"
+        >
+
+            <div class="photo-break-overlay"></div>
+
+            <p class="photo-break-caption">
+                Here's to the next adventure, together.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DAY PROGRAM
+        ================================================== -->
+
+        <section class="program section">
+
+            <p class="eyebrow">
+                THE DAY
+            </p>
+
+
+            <h2>
+                Our Wedding Day
+            </h2>
+
+
+            <p class="section-intro">
+                A day filled with love, laughter,
+                good food and even better company.
+            </p>
+
+
+            <div class="program-timeline">
+
+
+                <div class="program-item">
+
+                    <div class="program-time">
+                        2:30 PM
+                    </div>
+
+                    <div class="program-line"></div>
+
+                    <div class="program-info">
+
+                        <h3>
+                            ARRIVAL
+                        </h3>
+
+                        <p>
+                            Guests arrive and get settled
+                            before the ceremony.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="program-item">
+
+                    <div class="program-time">
+                        3:00 PM
+                    </div>
+
+                    <div class="program-line"></div>
+
+                    <div class="program-info">
+
+                        <h3>
+                            CEREMONY
+                        </h3>
+
+                        <p>
+                            The moment we've been waiting for.
+                            Join us as we say "I do."
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="program-item">
+
+                    <div class="program-time">
+                        4:00 PM
+                    </div>
+
+                    <div class="program-line"></div>
+
+                    <div class="program-info">
+
+                        <h3>
+                            PHOTOS &amp; CANAPÉS
+                        </h3>
+
+                        <p>
+                            Enjoy some refreshments while
+                            we capture the memories.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="program-item">
+
+                    <div class="program-time">
+                        5:00 PM
+                    </div>
+
+                    <div class="program-line"></div>
+
+                    <div class="program-info">
+
+                        <h3>
+                            RECEPTION
+                        </h3>
+
+                        <p>
+                            Dinner, speeches and celebrations
+                            with our closest family and friends.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="program-item">
+
+                    <div class="program-time">
+                        7:00 PM
+                    </div>
+
+                    <div class="program-line"></div>
+
+                    <div class="program-info">
+
+                        <h3>
+                            FIRST DANCE
+                        </h3>
+
+                        <p>
+                            A special moment before we
+                            get the dance floor moving.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="program-item">
+
+                    <div class="program-time">
+                        7:30 PM
+                    </div>
+
+                    <div class="program-line"></div>
+
+                    <div class="program-info">
+
+                        <h3>
+                            PARTY
+                        </h3>
+
+                        <p>
+                            Music, dancing, drinks and
+                            celebrating until the night ends.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LOCATION
+        ================================================== -->
+
+        <section class="location section">
+
+            <p class="eyebrow">
+                THE LOCATION
+            </p>
+
+
+            <h2>
+                Bellevue Guest Lodge
+            </h2>
+
+
+            <div class="location-layout">
+
+                <div class="location-details">
+
+                    <p class="location-address">
+                        Main Road R620,
+                        Ramsgate South, 4285
+                    </p>
+
+
+                    <p class="location-description">
+                        This is where we'll gather to celebrate
+                        the beginning of our forever.
+                    </p>
+
+
+                    <a
+                        class="directions-button btn-ripple"
+                        href="https://www.google.com/maps/dir/?api=1&destination=Bellevue%20Guest%20Lodge%2C%20Main%20Road%20R620%2C%20Ramsgate%20South%2C%204285%2C%20South%20Africa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GET DIRECTIONS
+                    </a>
+
+                </div>
+
+
+                <div class="map-frame">
+
+                    <div class="map-container">
+
+                        <iframe
+                            src="https://www.google.com/maps?q=Bellevue%20Guest%20Lodge%2C%20Main%20Road%20R620%2C%20Ramsgate%20South%2C%204285%2C%20South%20Africa&output=embed"
+                            width="100%"
+                            height="400"
+                            style="border:0;display:block;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Bellevue Guest Lodge Map"
+                        ></iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ADD TO CALENDAR
+        ================================================== -->
+
+        <section class="calendar-section section">
+
+            <p class="eyebrow">
+                SAVE THE DATE
+            </p>
+
+
+            <h2>
+                Don't forget the date.
+            </h2>
+
+
+            <p>
+                Add our wedding to your calendar
+                so you don't miss a moment.
+            </p>
+
+
+            <div class="calendar-card">
+
+                <div class="calendar-card-month">
+                    FEBRUARY
+                </div>
+
+                <div class="calendar-card-day">
+                    27
+                </div>
+
+                <div class="calendar-card-weekday">
+                    SATURDAY
+                </div>
+
+                <div class="calendar-card-year">
+                    2027
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="calendar-button btn-ripple"
+                onclick="downloadCalendarEvent()"
+            >
+                ADD WEDDING TO MY CALENDAR
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DRESS CODE
+        ================================================== -->
+
+        <section class="dress-code section">
+
+            <p class="eyebrow">
+                DRESS CODE
+            </p>
+
+
+            <h2>
+                Summer Elegance
+            </h2>
+
+
+            <p class="section-intro">
+                Come dressed up, comfortable
+                and ready to celebrate.
+            </p>
+
+
+            <div class="dress-grid">
+
+
+                <div class="dress-card">
+
+                    <h3>
+                        LADIES
+                    </h3>
+
+
+                    <p>
+                        Smart casual dresses, jumpsuits
+                        or elegant separates.
+                    </p>
+
+                </div>
+
+
+
+                <div class="dress-card">
+
+                    <h3>
+                        GENTLEMEN
+                    </h3>
+
+
+                    <p>
+                        Smart casual trousers, a shirt
+                        and a blazer or suit.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                Please leave white for the bride.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PHOTO BREAK
+        ================================================== -->
+
+        <section
+            class="photo-break"
+            style="background-image: url('couple 8.jpeg');"
+        >
+
+            <div class="photo-break-overlay"></div>
+
+            <p class="photo-break-caption">
+                Simply, us.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             GIFT REGISTRY / HONEYMOON FUND
+        ================================================== -->
+
+        <section
+            class="gift-registry section"
+            id="giftRegistry"
+        >
+
+            <p class="eyebrow">
+                GIFT REGISTRY
+            </p>
+
+
+            <h2>
+                Help us make memories.
+            </h2>
+
+
+            <div class="gift-content">
+
+                <p>
+                    Your presence at our wedding is already
+                    the greatest gift we could ask for.
+                </p>
+
+
+                <p>
+                    If you would like to bless us with a gift,
+                    we would love to put it towards our
+                    honeymoon and the adventures we'll share
+                    as husband and wife.
+                </p>
+
+
+                <p class="gift-ending">
+                    Help us turn your gift into a memory
+                    we'll treasure forever.
+                </p>
+
+            </div>
+
+
+
+            <!-- HONEYMOON FUND -->
+
+            <div class="honeymoon-card">
+
+                <div class="honeymoon-icon">
+                    ♡
+                </div>
+
+
+                <p class="eyebrow">
+                    OUR HONEYMOON FUND
+                </p>
+
+
+                <h3>
+                    Adventures Await
+                </h3>
+
+
+                <p>
+                    Instead of traditional gifts,
+                    you can contribute towards our
+                    honeymoon fund.
+                </p>
+
+
+                <div class="bank-details">
+
+
+                    <div class="bank-row">
+
+                        <span>
+                            BANK
+                        </span>
+
+                        <strong>
+                            DISCOVERY BANK
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="bank-row">
+
+                        <span>
+                            ACCOUNT HOLDER
+                        </span>
+
+                        <strong>
+                            JARED &amp; ROEZALEE
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="bank-row">
+
+                        <span>
+                            ACCOUNT NUMBER
+                        </span>
+
+                        <strong>
+                            19200265524
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="bank-row">
+
+                        <span>
+                            ACCOUNT TYPE
+                        </span>
+
+                        <strong>
+                            CHEQUE ACCOUNT
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="bank-row">
+
+                        <span>
+                            BRANCH CODE
+                        </span>
+
+                        <strong>
+                            679000
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             NOTICES
+        ================================================== -->
+
+        <section class="notices section">
+
+            <p class="eyebrow">
+                PLEASE NOTE
+            </p>
+
+
+            <h2>
+                A Few Things to Note
+            </h2>
+
+
+            <div class="notice-grid">
+
+                <div class="notice-card">
+
+                    <h3>
+                        ADULTS-ONLY CELEBRATION
+                    </h3>
+
+                    <p>
+                        While we adore your little ones, we've
+                        chosen to make our wedding an adults only
+                        celebration. We hope you'll enjoy a well
+                        deserved night out with us.
+                    </p>
+
+                </div>
+
+
+                <div class="notice-card">
+
+                    <h3>
+                        REGARDING PLUS-ONES
+                    </h3>
+
+                    <p>
+                        Due to venue capacity, we're only able
+                        to accommodate the guests listed on your
+                        invitation. Thank you so much for
+                        understanding.
+                    </p>
+
+                </div>
+
+
+                <div class="notice-card">
+
+                    <h3>
+                        RSVP DEADLINE
+                    </h3>
+
+                    <p>
+                        If we don't hear from you by
+                        1 October 2026, we will assume you're
+                        unable to attend so we can finalize our
+                        guest count. Thank you for understanding!
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RSVP
+        ================================================== -->
+
+        <section
+            class="rsvp section"
+            id="rsvp"
+        >
+
+            <p class="eyebrow">
+                RSVP
+            </p>
+
+
+            <h2>
+                Will you join us?
+            </h2>
+
+
+            <p class="rsvp-intro">
+
+                Please let us know if you can celebrate
+                with us on our special day.
+
+            </p>
+
+
+
+            <!-- INVITATION FINDER -->
+
+            <div
+                class="invitation-finder"
+                id="invitationFinder"
+            >
+
+                <h3>
+                    Find Your Invitation
+                </h3>
+
+
+                <p>
+
+                    Enter the guest code found on your
+                    invitation to view the names linked
+                    to your invite.
+
+                </p>
+
+
+                <label for="guestCode">
+                    GUEST CODE
+                </label>
+
+
+                <input
+                    type="text"
+                    id="guestCode"
+                    placeholder="EXAMPLE: JR-001"
+                    maxlength="20"
+                    autocomplete="off"
+                >
+
+
+                <button
+                    onclick="findInvitation()"
+                    type="button"
+                    class="btn-ripple"
+                >
+                    FIND MY INVITATION
+                </button>
+
+
+                <p
+                    id="codeError"
+                    class="code-error"
+                ></p>
+
+            </div>
+
+
+
+            <!-- PERSONAL INVITATION -->
+
+            <div
+                class="personal-invitation hidden"
+                id="personalInvitation"
+            >
+
+                <p class="eyebrow">
+                    YOUR INVITATION
+                </p>
+
+
+                <h3 id="guestName">
+                    Guest Name
+                </h3>
+
+
+                <p class="reserved-text">
+                    We have reserved
+                </p>
+
+
+                <strong id="guestSeats">
+                    0 SEATS
+                </strong>
+
+
+                <p class="reserved-text">
+                    especially for you.
+                </p>
+
+
+                <div class="guest-code-display">
+
+                    <span>
+                        INVITATION CODE
+                    </span>
+
+
+                    <strong id="displayGuestCode">
+                        JR-001
+                    </strong>
+
+                </div>
+
+
+                <div class="rsvp-question">
+
+                    <h4>
+                        Will you be joining us?
+                    </h4>
+
+
+                    <div class="rsvp-buttons">
+
+                        <button
+                            onclick="selectAttendance('yes')"
+                            type="button"
+                            class="btn-ripple"
+                        >
+                            YES, WE'LL BE THERE
+                        </button>
+
+
+                        <button
+                            onclick="selectAttendance('no')"
+                            class="secondary-button btn-ripple"
+                            type="button"
+                        >
+                            SORRY, WE CAN'T MAKE IT
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    id="rsvpForm"
+                    class="hidden"
+                >
+
+                    <label for="diet">
+                        DIETARY REQUIREMENTS
+                    </label>
+
+
+                    <select id="diet">
+
+                        <option value="None">
+                            None
+                        </option>
+
+                        <option value="Vegetarian">
+                            Vegetarian
+                        </option>
+
+                        <option value="Halal">
+                            Halal
+                        </option>
+
+                        <option value="Vegan">
+                            Vegan
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+
+                    <label for="song">
+                        SONG REQUEST
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="song"
+                        placeholder="What song will get you dancing?"
+                    >
+
+
+                    <label for="accommodation">
+                        ACCOMMODATION
+                    </label>
+
+
+                    <select id="accommodation">
+
+                        <option value="Not needed">
+                            Not needed
+                        </option>
+
+                        <option value="Please assist">
+                            Yes, please help me arrange
+                        </option>
+
+                        <option value="Already arranged">
+                            Already arranged
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        onclick="submitRSVP()"
+                        class="submit-button btn-ripple"
+                        type="button"
+                    >
+                        CONFIRM RSVP
+                    </button>
+
+                </div>
+
+
+                <div id="rsvpMessage"></div>
+
+
+                <button
+                    onclick="resetInvitation()"
+                    class="change-code-button btn-ripple"
+                    type="button"
+                >
+                    USE A DIFFERENT CODE
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            <h2>
+                Jared
+                <span>&amp;</span>
+                Roezalee
+            </h2>
+
+
+            <p>
+                27 · 02 · 2027
+            </p>
+
+
+            <p class="footer-message">
+                From the first hello, to forever.
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
