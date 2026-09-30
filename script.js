@@ -43,7 +43,7 @@ const guestList = [
     { code: "JR-030", name: "Luvendran", seats: 1 },
     { code: "JR-031", name: "Polly, Bryden & Daniel", seats: 3 },
     { code: "JR-032", name: "Rocky & Rikyle", seats: 2 },
-    { code: "JR-033", name: "Pastor Rufus & Aunty Di", seats: 2 },
+    { code: "JR-033", name: "Pastor Rufus & Aunty Diane", seats: 2 },
     { code: "JR-034", name: "Samir & Jadeen", seats: 2 },
     { code: "JR-035", name: "Kevin & Linda", seats: 2 },
     { code: "JR-036", name: "Lolly", seats: 1 },
@@ -64,7 +64,7 @@ const guestList = [
     { code: "JR-051", name: "Saschin & Karishma", seats: 2 },
     { code: "JR-052", name: "Pastor Speedy & Aunty Geraldine", seats: 2 },
     { code: "JR-053", name: "Samkelo Chowmein Slabelanga Sabela", seats: 1 },
-    { code: "JR-054", name: "Mujahied(the lord that never wears flip flops)", seats: 1 },
+    { code: "JR-054", name: "Mujahied(the lord that never wears flip flops,cause he cannot)", seats: 1 },
     { code: "JR-055", name: "Stanton & Nadia", seats: 2 },
     { code: "JR-056", name: "Dylan & Kaylin", seats: 2 },
     { code: "JR-057", name: "Erin & Keegan", seats: 2 },
@@ -191,7 +191,7 @@ function sendRSVPToBackend(code, guest) {
 
 
 const whatsappNumber =
-    "27645464572";
+    "27678160571";
 
 
 function buildWhatsAppMessage(code, guest) {
