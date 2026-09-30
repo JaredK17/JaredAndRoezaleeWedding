@@ -49,7 +49,7 @@ const guestList = [
     { code: "JR-036", name: "Lolly", seats: 1 },
     { code: "JR-037", name: "Teresa", seats: 1 },
     { code: "JR-038", name: "Reuben & Cookie", seats: 2 },
-    { code: "JR-039", name: "Shannon", seats: 1 },
+    { code: "JR-039", name: "Shannon & Theo", seats: 1 },
     { code: "JR-040", name: "Shante", seats: 1 },
     { code: "JR-041", name: "Myrin & Romona", seats: 2 },
     { code: "JR-042", name: "Rishan & Claudine", seats: 2 },
