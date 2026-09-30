@@ -1943,11 +1943,11 @@ body.custom-cursor-active select {
 
     border-radius: 50%;
 
-    border: 1px solid var(--color-border);
+    border: 1px solid #b3121f;
 
-    background: var(--color-surface);
+    background: #d7192a;
 
-    color: var(--color-primary);
+    color: white;
 
     font-size: 18px;
 
@@ -1961,6 +1961,9 @@ body.custom-cursor-active select {
         transform .3s ease,
         background .3s ease,
         color .3s ease;
+
+    animation:
+        musicFlash 1.2s ease-in-out infinite;
 }
 
 
@@ -1970,25 +1973,26 @@ body.custom-cursor-active select {
 
 
 .music-toggle.is-playing {
-    background: var(--color-gold);
+    background: #d7192a;
 
     color: white;
-
-    animation:
-        musicPulse 2.4s ease-in-out infinite;
 }
 
 
-@keyframes musicPulse {
+@keyframes musicFlash {
 
     0%, 100% {
+        background: #d7192a;
+
         box-shadow:
-            0 0 0 0 var(--color-gold-soft);
+            0 0 0 0 rgba(215,25,42,.6);
     }
 
     50% {
+        background: #ff4d5a;
+
         box-shadow:
-            0 0 0 10px transparent;
+            0 0 0 12px rgba(215,25,42,0);
     }
 
 }
@@ -1996,7 +2000,7 @@ body.custom-cursor-active select {
 
 @media (prefers-reduced-motion: reduce) {
 
-    .music-toggle.is-playing {
+    .music-toggle {
         animation: none;
     }
 
